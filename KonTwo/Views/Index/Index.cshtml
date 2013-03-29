@@ -1,0 +1,74 @@
+﻿@{
+  ViewBag.Title = "Index";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="span12 offset2">
+  <div class="container" id="pageContent">
+    <div class="padder50"></div>
+    <div class="row">
+      <form class="form-search" action="#">
+        <fieldset>
+          <legend>Search-'O-Matic</legend>
+
+          <input type="text" id="searchText" placeholder="Search within:" />
+          @Html.DropDownList("searchScope", new SelectList(ViewBag.SearchScopes))
+          <button class="btn btn-success">Go! <i class="icon-circle-arrow-right"></i></button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('form').submit(function () {
+        DoSearch();
+        return false;
+      });
+
+      $('#searchText').focus();
+
+      function DoSearch() {
+        var request = {
+          SearchText: $('#searchText').val(),
+          Scope: $('#searchScope').val()
+        }
+
+        $.ajax({
+          url: '@Url.Action("Search")',
+          type: 'POST',
+          data: $.toDictionary(request),
+          success: ShowSearchResults,
+          error: Doh
+        });
+
+        return false;
+      }
+
+      function ShowSearchResults(results) {
+        $('#pageContent').contents().remove();
+
+        AddItem("<a href='/'>Search again</a>");
+
+        for (var ix = 0; ix < results.length; ix++) {
+          AddItem(GetResultHtml(results[ix]));
+        }
+      }
+
+      function AddItem(itemHtml) {
+        $("<div/>").addClass("row").html(itemHtml).appendTo("#pageContent");
+      }
+
+      function GetResultHtml(result) {
+        return "<h3><a href='" + result.TitleLink + "'>" + result.Title + "</a></h3><p>" + result.Excerpt;
+      }
+
+      function Doh(results) {
+        //ShowSearchResults(results);
+      }
+
+    }); // document.ready
+  </script>
+}
