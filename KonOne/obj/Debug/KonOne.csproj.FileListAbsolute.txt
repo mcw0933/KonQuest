@@ -1,5 +1,0 @@
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne\bin\Debug\KonOne.dll
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne\bin\Debug\KonOne.pdb
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne\obj\Debug\KonOne.dll
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne\obj\Debug\KonOne.pdb
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne\obj\Debug\KonOne.csprojResolveAssemblyReference.cache

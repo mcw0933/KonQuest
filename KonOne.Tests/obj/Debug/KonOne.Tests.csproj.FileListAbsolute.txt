@@ -1,7 +1,0 @@
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\bin\Debug\KonOne.Tests.dll
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\bin\Debug\KonOne.Tests.pdb
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\bin\Debug\KonOne.dll
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\bin\Debug\KonOne.pdb
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\obj\Debug\KonOne.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\obj\Debug\KonOne.Tests.dll
-C:\Users\Matt\Dropbox\src\KonQuest\KonOne.Tests\obj\Debug\KonOne.Tests.pdb
