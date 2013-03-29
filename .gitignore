@@ -85,6 +85,18 @@ packages
 csx
 *.build.csdef
 
+# Windows Azure Deployment
+*.csdef
+*.cscfg
+*.publishsettings
+*.pubxml
+*.azurePubxml
+
+# Certificates and Keys
+*.cer
+*.snk
+*.pfx
+
 # Windows Store app package directory
 AppPackages/
 
